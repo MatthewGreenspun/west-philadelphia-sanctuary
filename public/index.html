@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>West Philadelphia Sanctuary</title>
+  <script>
+    // Old map links (/?space=…) now live at /map.
+    if (new URLSearchParams(location.search).has('space')) location.replace('/map' + location.search);
+  </script>
+  <meta name="description" content="The West Philadelphia Sanctuary at Penn: events, volunteering, and a community map of third spaces in West Philly." />
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1 id="heroTitle"></h1>
+          <p class="lead" id="heroText"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="/events"><span class="icon" data-icon="calendar"></span>Our events</a>
+            <a class="btn btn-outline btn-lg" href="/volunteer">Volunteer with us</a>
+          </div>
+        </div>
+        <a class="hero-map" href="/map" aria-label="Open the third spaces map">
+          <div id="miniMap"></div>
+          <div class="hero-map-label">
+            <div><strong>Third spaces in West Philly</strong><small id="spaceCount">Libraries, parks, cafés and community spaces</small></div>
+            <span class="go"><span class="icon" data-icon="arrowRight"></span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="page">
+      <section class="section-block">
+        <div class="section-head"><h2>What we do</h2></div>
+        <div class="pillars">
+          <a class="pillar" href="/events">
+            <span class="pi"><span class="icon" data-icon="calendar"></span></span>
+            <h3>Free pop-ups</h3>
+            <p>Clay art, jewelry making, writing workshops, singing, board games and more, usually Monday evenings at The Rotunda.</p>
+          </a>
+          <a class="pillar" href="/volunteer">
+            <span class="pi"><span class="icon" data-icon="hand"></span></span>
+            <h3>Volunteer with us</h3>
+            <p>Help run pop-ups, welcome new faces, and build a space that reduces loneliness and stigma in West Philly.</p>
+          </a>
+          <a class="pillar" href="/map">
+            <span class="pi"><span class="icon" data-icon="map"></span></span>
+            <h3>Third spaces map</h3>
+            <p>Our community map of libraries, parks, cafés and other places to rest and connect. Anyone can add to it.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2 id="upcomingTitle">Coming up</h2>
+          <a class="more-link" href="/events">All events <span class="icon" data-icon="arrowRight"></span></a>
+        </div>
+        <div id="upcoming"></div>
+      </section>
+
+      <section class="section-block" id="photosSection" hidden>
+        <div class="section-head">
+          <h2>From past events</h2>
+          <a class="more-link" href="/gallery">See the gallery <span class="icon" data-icon="arrowRight"></span></a>
+        </div>
+        <div class="photo-strip" id="photoStrip"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2>Follow along</h2>
+          <a class="more-link" href="https://www.instagram.com/westphillysanctuary/" target="_blank" rel="noopener" id="igLink">@westphillysanctuary <span class="icon" data-icon="arrowRight"></span></a>
+        </div>
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/westphillysanctuary/embed" title="West Philadelphia Sanctuary on Instagram" loading="lazy" scrolling="no"></iframe>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="cta-band">
+          <div>
+            <h2>Want to get involved?</h2>
+            <p>Always free, always open to everyone. Whether you have one evening this semester or want to help run things, we'd love to hear from you.</p>
+          </div>
+          <a class="btn btn-primary btn-lg" href="/volunteer">Sign up to volunteer</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="/pages/home.js"></script>
+</body>
+</html>

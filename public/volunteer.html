@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Volunteer · West Philadelphia Sanctuary</title>
+  <meta name="description" content="Volunteer with the West Philadelphia Sanctuary. Tell us how you'd like to help." />
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="page">
+    <div class="page-head">
+      <p class="eyebrow">Volunteer</p>
+      <h1>Help make room for each other</h1>
+      <p>Tell us a bit about yourself and how you’d like to help. No experience needed, and any amount of time is welcome.</p>
+    </div>
+
+    <div class="volunteer-grid">
+      <div>
+        <form class="form-card" id="volForm" novalidate>
+          <div class="form-section">
+            <h3>About you</h3>
+            <div class="grid-2">
+              <label class="field"><span>Name <em>*</em></span><input name="name" required maxlength="100" autocomplete="name" /></label>
+              <label class="field"><span>Email <em>*</em></span><input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+            </div>
+            <div class="grid-2">
+              <label class="field"><span>Phone <small>(optional)</small></span><input name="phone" type="tel" maxlength="40" autocomplete="tel" /></label>
+              <label class="field"><span>You are a…</span><select name="affiliation" id="affiliation"><option value="">Choose one</option></select></label>
+            </div>
+            <label class="field"><span>School and year <small>(if you’re a student)</small></span><input name="school" maxlength="120" placeholder="e.g. College ’28, SP2 first-year" /></label>
+          </div>
+
+          <div class="form-section">
+            <h3>How would you like to help? <em>*</em></h3>
+            <div class="check-grid" id="interests"></div>
+          </div>
+
+          <div class="form-section">
+            <h3>When are you usually free?</h3>
+            <div class="check-grid" id="availability"></div>
+          </div>
+
+          <div class="form-section">
+            <h3>Anything else</h3>
+            <label class="field"><span>How did you hear about us?</span><input name="howHeard" maxlength="200" placeholder="A friend, Instagram, an event…" /></label>
+            <label class="field"><span>Tell us more <small>(optional)</small></span><textarea name="message" rows="4" maxlength="2000" placeholder="Ideas, skills you'd like to share, questions, anything we should know…"></textarea></label>
+          </div>
+          <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off" /></label>
+
+          <p class="form-error" id="volError" hidden></p>
+          <div class="form-actions">
+            <small>Only club officers see what you send here. We’ll use it to get in touch about volunteering.</small>
+            <button class="btn btn-primary btn-lg" type="submit" id="volSubmit">Send</button>
+          </div>
+        </form>
+
+        <div class="form-card success-card" id="volDone" hidden>
+          <span class="tick"><span class="icon" data-icon="check"></span></span>
+          <h2>Thank you!</h2>
+          <p>We got your form. Someone from the club will reach out by email soon. In the meantime, come say hi at an event.</p>
+          <a class="btn btn-primary" href="/events">See upcoming events</a>
+        </div>
+      </div>
+
+      <aside class="volunteer-aside">
+        <div class="aside-card">
+          <h3>What happens next</h3>
+          <ol class="steps">
+            <li><div><strong>We read every form</strong>An officer will look at what you sent.</div></li>
+            <li><div><strong>We reach out</strong>We’ll email you about roles that fit your interests and schedule.</div></li>
+            <li><div><strong>Jump in</strong>Help at an event, join a planning meeting, or map a few spaces.</div></li>
+          </ol>
+        </div>
+        <div class="aside-card" id="volContact" hidden></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+  <script type="module" src="/pages/volunteer.js"></script>
+</body>
+</html>

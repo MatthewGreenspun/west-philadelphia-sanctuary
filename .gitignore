@@ -1,0 +1,42 @@
+# ---- dependencies ----
+node_modules/
+
+# ---- secrets and local settings (never commit) ----
+.env
+.env.*
+!.env.example
+*.local
+.runtimeconfig.json
+# Google / Firebase service account keys
+*-firebase-adminsdk-*.json
+service-account*.json
+serviceAccount*.json
+credentials*.json
+*.pem
+*.key
+*.p12
+
+# ---- Firebase ----
+.firebase/
+emulator-data/
+firebase-debug*.log
+firestore-debug*.log
+database-debug*.log
+pubsub-debug*.log
+ui-debug*.log
+storage-debug*.log
+
+# ---- local data from older versions ----
+data/
+
+# ---- logs and editor / OS clutter ----
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ---- Claude Code local settings ----
+.claude/

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>About · West Philadelphia Sanctuary</title>
+  <meta name="description" content="Who we are and what we do: West Philadelphia Sanctuary." />
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="page">
+    <div class="page-head">
+      <p class="eyebrow">About us</p>
+      <h1 id="mission">West Philadelphia Sanctuary</h1>
+    </div>
+
+    <div class="about-grid">
+      <div class="prose" id="aboutText"></div>
+      <aside class="aside-card">
+        <div class="stat-row">
+          <a class="stat" href="/map"><strong id="statSpaces">–</strong><small>spaces mapped</small></a>
+          <a class="stat" href="/events"><strong id="statEvents">–</strong><small>upcoming events</small></a>
+          <a class="stat" href="/gallery"><strong id="statPhotos">–</strong><small>photos</small></a>
+        </div>
+        <div id="meetingBox" hidden>
+          <h3>When we meet</h3>
+          <div class="info-row"><span class="icon" data-icon="clock"></span><span id="meeting"></span></div>
+        </div>
+        <div id="contactBox" hidden>
+          <h3>Get in touch</h3>
+          <div id="contact"></div>
+        </div>
+        <a class="btn btn-primary btn-block" href="/volunteer">Get involved</a>
+      </aside>
+    </div>
+
+    <section class="section-block" id="teamSection" hidden>
+      <div class="section-head"><h2>Our team</h2></div>
+      <div class="team-grid" id="team"></div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-head"><h2>What’s a third space?</h2></div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pi"><span class="icon" data-icon="arch"></span></span>
+          <h3>Not home, not work</h3>
+          <p>Your first place is home, your second is work or class. A third space is somewhere else you can simply be — without needing a reason or a reservation.</p>
+        </div>
+        <div class="pillar">
+          <span class="pi"><span class="icon" data-icon="users"></span></span>
+          <h3>Where community grows</h3>
+          <p>Libraries, parks, cafés, rec centers and porches are where neighbors meet, friendships start, and people find support.</p>
+        </div>
+        <a class="pillar" href="/map">
+          <span class="pi"><span class="icon" data-icon="map"></span></span>
+          <h3>Mapped together</h3>
+          <p>We keep a shared map of third spaces across West Philadelphia. Know a spot we’re missing? Add it to the map.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+  <script type="module" src="/pages/about.js"></script>
+</body>
+</html>

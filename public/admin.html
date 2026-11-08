@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Club admin · West Philadelphia Sanctuary</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+  <header id="siteHeader"></header>
+
+  <main class="page">
+    <div class="admin-gate empty-card" id="gate" hidden></div>
+
+    <div id="adminApp" hidden>
+      <div class="page-head">
+        <p class="eyebrow">Club admin</p>
+        <h1>Run the club site</h1>
+      </div>
+      <nav class="admin-tabs" id="adminTabs" role="tablist">
+        <button data-tab="events" role="tab">Events</button>
+        <button data-tab="volunteers" role="tab">Volunteers <span class="count"></span></button>
+        <button data-tab="gallery" role="tab">Gallery</button>
+        <button data-tab="site" role="tab">About &amp; contact</button>
+        <button data-tab="map" role="tab">Map <span class="count"></span></button>
+      </nav>
+      <div id="adminBody"></div>
+    </div>
+  </main>
+
+  <!-- Create / edit event -->
+  <dialog id="eventDialog" class="dialog dialog-lg">
+    <form id="eventForm" method="dialog" novalidate>
+      <header class="dialog-head">
+        <h2 id="eventFormTitle">New event</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Close"><span class="icon" data-icon="x"></span></button>
+      </header>
+      <div class="dialog-body form-card" style="border:0;border-radius:0;padding-top:0">
+        <div class="form-section">
+          <label class="field"><span>Title <em>*</em></span><input name="title" required maxlength="140" placeholder="e.g. Clark Park picnic" /></label>
+          <label class="field"><span>One-line summary</span><input name="summary" maxlength="240" placeholder="Shown on event cards" /></label>
+          <label class="field"><span>Description</span><textarea name="description" rows="5" maxlength="6000" placeholder="What to expect, what to bring, who it's for…"></textarea></label>
+        </div>
+        <div class="form-section">
+          <h3>When <small class="muted" style="font-weight:400">(Philadelphia time)</small></h3>
+          <div class="grid-2">
+            <label class="field"><span>Starts <em>*</em></span><input name="startsAt" type="datetime-local" required /></label>
+            <label class="field"><span>Ends</span><input name="endsAt" type="datetime-local" /></label>
+          </div>
+        </div>
+        <div class="form-section">
+          <h3>Where</h3>
+          <label class="field"><span>Third space on our map <small>(optional)</small></span><select name="spaceId" id="spaceSelect"><option value="">Not on the map</option></select></label>
+          <div class="grid-2">
+            <label class="field"><span>Place name</span><input name="location" maxlength="160" placeholder="e.g. Clark Park, by the Dickens statue" /></label>
+            <label class="field"><span>Address</span><input name="address" maxlength="200" /></label>
+          </div>
+        </div>
+        <div class="form-section">
+          <h3>Cover photo</h3>
+          <div class="photo-grid" id="coverGrid"></div>
+        </div>
+        <div class="form-section">
+          <h3>Sign-ups</h3>
+          <div class="grid-2">
+            <label class="field"><span>Sign-up form</span>
+              <select name="signupMode">
+                <option value="rsvp">RSVP — going or interested</option>
+                <option value="interest">Interest form only</option>
+                <option value="none">No sign-up</option>
+              </select>
+            </label>
+            <label class="field"><span>Spots available <small>(blank = no limit)</small></span><input name="capacity" type="number" min="1" step="1" /></label>
+          </div>
+          <label class="field"><span>External link <small>(optional)</small></span><input name="link" type="url" placeholder="https://" /></label>
+          <label class="toggle"><input type="checkbox" name="published" checked /><span>Show this event on the site (turn off to keep it as a draft)</span></label>
+        </div>
+        <p class="form-error" id="eventError" hidden></p>
+      </div>
+      <footer class="dialog-foot">
+        <button type="button" class="btn btn-ghost" data-close>Cancel</button>
+        <button type="submit" class="btn btn-primary" id="eventSubmit">Save event</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <footer class="site-footer" id="siteFooter"></footer>
+  <script type="module" src="/pages/admin.js"></script>
+</body>
+</html>

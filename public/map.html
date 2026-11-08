@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Third Spaces Map · West Philadelphia Sanctuary</title>
+  <meta name="description" content="West Philadelphia Sanctuary's map of third spaces — places in West Philly to rest, read, work and meet people that aren't home or work." />
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/site.css" />
+</head>
+<body class="page-map">
+  <header id="siteHeader"></header>
+  <div class="map-toolbar">
+    <h1 class="map-title">Third spaces <span>in West Philly</span></h1>
+    <label class="search">
+      <span class="icon" data-icon="search"></span>
+      <input id="search" type="search" placeholder="Search spaces, neighborhoods, tags…" autocomplete="off" />
+    </label>
+    <button class="btn btn-ghost btn-small" id="locateBtn" title="Show spaces near me">
+      <span class="icon" data-icon="locate"></span><span class="hide-sm">Near me</span>
+    </button>
+    <button class="btn btn-primary btn-small" id="addBtn">
+      <span class="icon" data-icon="plus"></span><span class="hide-sm">Add a space</span>
+    </button>
+  </div>
+
+  <main class="layout" id="layout" data-mobile-view="map">
+    <aside class="sidebar" id="sidebar">
+      <section id="listView" class="list-view">
+        <div class="filters">
+          <div class="chip-row" id="categoryChips" role="group" aria-label="Categories"></div>
+          <div class="filter-bar">
+            <button class="btn btn-small btn-outline" id="filtersToggle" aria-expanded="false">
+              <span class="icon" data-icon="sliders"></span>Filters<span class="badge" id="filterCount" hidden></span>
+            </button>
+            <label class="toggle"><input type="checkbox" id="openNow" /><span>Open now</span></label>
+            <label class="toggle"><input type="checkbox" id="savedOnly" /><span>Saved</span></label>
+            <select id="sortBy" class="select-small" aria-label="Sort by">
+              <option value="recommended">Recommended</option>
+              <option value="distance">Nearest</option>
+              <option value="rating">Top rated</option>
+              <option value="newest">Newest</option>
+              <option value="name">A–Z</option>
+            </select>
+          </div>
+          <div class="filter-panel" id="filterPanel" hidden>
+            <div class="filter-group">
+              <h4>Amenities</h4>
+              <div class="chip-row wrap" id="amenityChips"></div>
+            </div>
+            <div class="filter-group two-col">
+              <div>
+                <h4>Noise level</h4>
+                <div class="segmented" id="noiseFilter">
+                  <button data-value="">Any</button><button data-value="quiet">Quiet</button><button data-value="moderate">Moderate</button><button data-value="lively">Lively</button>
+                </div>
+              </div>
+              <div>
+                <h4>Max spend</h4>
+                <div class="segmented" id="costFilter">
+                  <button data-value="">Any</button><button data-value="0">Free</button><button data-value="1">$</button><button data-value="2">$$</button>
+                </div>
+              </div>
+            </div>
+            <div class="filter-group two-col">
+              <div>
+                <h4>Neighborhood</h4>
+                <select id="hoodFilter" class="select-small" aria-label="Neighborhood"><option value="">All of West Philly</option></select>
+              </div>
+              <div>
+                <h4>Hours</h4>
+                <label class="toggle"><input type="checkbox" id="openLate" /><span>Open late today (10 PM+)</span></label>
+              </div>
+            </div>
+            <div class="filter-group row-between">
+              <label class="toggle"><input type="checkbox" id="inView" /><span>Only show what's on the map</span></label>
+              <button class="link-btn" id="clearFilters">Clear all</button>
+            </div>
+          </div>
+        </div>
+        <div class="list-meta"><span id="resultCount"></span></div>
+        <ul class="space-list" id="spaceList"></ul>
+        <div class="empty" id="emptyState" hidden>
+          <p><strong>No spaces match.</strong></p>
+          <p>Try clearing a filter, or add a place you love.</p>
+          <button class="btn btn-outline btn-small" id="emptyClear">Clear filters</button>
+        </div>
+        <p class="hint">Tip: right-click (or long-press) anywhere on the map to add a space there.</p>
+        <footer class="about">
+          <p><strong>What's a third space?</strong> Somewhere that isn't home (your first place) or work or class (your second) — where you can rest, read, think, or meet people without needing a reason.</p>
+          <p>Kept up by the <a href="/about"><strong>West Philadelphia Sanctuary</strong></a> and everyone who adds to it. The map covers West Philadelphia, from the Schuylkill to Cobbs Creek. Know a place we're missing? Add it.</p>
+        </footer>
+      </section>
+
+      <section id="detailView" class="detail-view" hidden></section>
+    </aside>
+
+    <div class="map-wrap">
+      <div id="map" aria-label="Map of third spaces"></div>
+    </div>
+
+    <button class="mobile-toggle btn btn-dark" id="mobileToggle">
+      <span class="icon" data-icon="list"></span><span>List</span>
+    </button>
+  </main>
+
+  <!-- Add / edit form -->
+  <dialog id="formDialog" class="dialog dialog-lg">
+    <form id="spaceForm" method="dialog" novalidate>
+      <header class="dialog-head">
+        <h2 id="formTitle">Add a space</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Close"><span class="icon" data-icon="x"></span></button>
+      </header>
+      <div class="dialog-body">
+        <div class="form-section">
+          <label class="field">
+            <span>Name <em>*</em></span>
+            <input name="name" required maxlength="120" placeholder="e.g. Clark Park" />
+          </label>
+          <div class="field">
+            <span>Category</span>
+            <div class="category-picker" id="categoryPicker"></div>
+          </div>
+          <label class="field">
+            <span>Description</span>
+            <textarea name="description" rows="3" maxlength="3000" placeholder="What makes it a good place to spend time? Seating, vibe, when to go…"></textarea>
+          </label>
+        </div>
+
+        <div class="form-section">
+          <h3>Location <em>*</em></h3>
+          <div class="geo-search">
+            <span class="icon" data-icon="search"></span>
+            <input id="geoSearch" type="search" placeholder="Search an address or place in West Philly" autocomplete="off" />
+            <ul class="geo-results" id="geoResults" hidden></ul>
+          </div>
+          <div class="pick-map" id="pickMap"></div>
+          <p class="field-hint">Drag the pin or click the map to set the exact spot.</p>
+          <div class="grid-2">
+            <label class="field"><span>Address</span><input name="address" maxlength="200" /></label>
+            <label class="field"><span>Neighborhood</span><input name="neighborhood" maxlength="80" /></label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Photos</h3>
+          <div class="photo-grid" id="photoGrid">
+            <label class="photo-add">
+              <input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp" multiple hidden />
+              <span class="icon" data-icon="camera"></span><span>Add photos</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>What's it like?</h3>
+          <div class="field">
+            <span>Amenities</span>
+            <div class="chip-row wrap" id="amenityPicker"></div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <span>Typical spend</span>
+              <div class="segmented" id="costPicker">
+                <button type="button" data-value="0">Free</button><button type="button" data-value="1">$</button><button type="button" data-value="2">$$</button><button type="button" data-value="3">$$$</button>
+              </div>
+            </div>
+            <div class="field">
+              <span>Noise level</span>
+              <div class="segmented" id="noisePicker">
+                <button type="button" data-value="quiet">Quiet</button><button type="button" data-value="moderate">Moderate</button><button type="button" data-value="lively">Lively</button>
+              </div>
+            </div>
+          </div>
+          <label class="field">
+            <span>Tags <small>(comma separated)</small></span>
+            <input name="tags" placeholder="reading, chess, river views" />
+          </label>
+        </div>
+
+        <div class="form-section">
+          <div class="row-between">
+            <h3>Hours</h3>
+            <button type="button" class="link-btn" id="copyHours">Copy Monday to every day</button>
+          </div>
+          <div class="hours-editor" id="hoursEditor"></div>
+        </div>
+
+        <div class="form-section">
+          <label class="field"><span>Website</span><input name="website" type="url" placeholder="https://" /></label>
+        </div>
+        <p class="form-error" id="formError" hidden></p>
+      </div>
+      <footer class="dialog-foot">
+        <button type="button" class="btn btn-ghost" data-close>Cancel</button>
+        <button type="submit" class="btn btn-primary" id="formSubmit">Add space</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- Report a problem -->
+  <dialog id="reportDialog" class="dialog dialog-sm">
+    <form id="reportForm" method="dialog">
+      <header class="dialog-head">
+        <h2>Report a problem</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Close"><span class="icon" data-icon="x"></span></button>
+      </header>
+      <div class="dialog-body">
+        <div class="radio-list">
+          <label><input type="radio" name="reason" value="closed" checked /> Permanently closed</label>
+          <label><input type="radio" name="reason" value="wrong-info" /> Wrong hours or info</label>
+          <label><input type="radio" name="reason" value="wrong-location" /> Wrong location</label>
+          <label><input type="radio" name="reason" value="not-a-third-space" /> Not really a third space</label>
+          <label><input type="radio" name="reason" value="other" /> Something else</label>
+        </div>
+        <label class="field"><span>Details (optional)</span><textarea name="note" rows="3" maxlength="500"></textarea></label>
+      </div>
+      <footer class="dialog-foot">
+        <button type="button" class="btn btn-ghost" data-close>Cancel</button>
+        <button type="submit" class="btn btn-primary">Send report</button>
+      </footer>
+    </form>
+  </dialog>
+
+
+  <!-- Moderation -->
+  <dialog id="modDialog" class="dialog dialog-lg">
+    <div class="mod-wrap">
+      <header class="dialog-head">
+        <h2>Moderation</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Close"><span class="icon" data-icon="x"></span></button>
+      </header>
+      <nav class="mod-tabs" id="modTabs">
+        <button data-tab="spaces">New spaces <span class="count"></span></button>
+        <button data-tab="edits">Suggested edits <span class="count"></span></button>
+        <button data-tab="reports">Reports <span class="count"></span></button>
+        <button data-tab="users">People</button>
+        <button data-tab="removed">Removed</button>
+      </nav>
+      <div class="dialog-body mod-body" id="modBody"></div>
+    </div>
+  </dialog>
+
+  <!-- Photo viewer -->
+  <dialog id="lightbox" class="lightbox">
+    <button class="icon-btn lb-close" data-close aria-label="Close"><span class="icon" data-icon="x"></span></button>
+    <button class="icon-btn lb-prev" id="lbPrev" aria-label="Previous photo"><span class="icon" data-icon="chevronLeft"></span></button>
+    <img id="lbImg" alt="" />
+    <button class="icon-btn lb-next" id="lbNext" aria-label="Next photo"><span class="icon" data-icon="chevronRight"></span></button>
+  </dialog>
+
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

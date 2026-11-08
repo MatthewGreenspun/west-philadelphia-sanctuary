@@ -1,0 +1,970 @@
+[
+  {
+    "id": "clark-park",
+    "name": "Clark Park",
+    "category": "park",
+    "lat": 39.947161,
+    "lng": -75.209702,
+    "neighborhood": "Spruce Hill",
+    "address": "4300 Baltimore Ave, Philadelphia, PA 19104",
+    "description": "West Philly's living room. Saturday farmers market, Shakespeare in summer, a big grassy bowl for picnics, and plenty of benches under old trees.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs",
+      "kids",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "farmers market",
+      "picnic",
+      "shakespeare"
+    ]
+  },
+  {
+    "id": "malcolm-x-park",
+    "name": "Malcolm X Park",
+    "category": "park",
+    "lat": 39.952649,
+    "lng": -75.22539,
+    "neighborhood": "Cedar Park",
+    "address": "51st St & Pine St, Philadelphia, PA 19143",
+    "description": "Shady neighborhood park with winding paths, a playground, and frequent drum circles and community gatherings in warm weather.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs",
+      "kids",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "community",
+      "drum circle"
+    ]
+  },
+  {
+    "id": "cedar-park",
+    "name": "Cedar Park",
+    "category": "park",
+    "lat": 39.948225,
+    "lng": -75.222535,
+    "neighborhood": "Cedar Park",
+    "address": "50th St & Baltimore Ave, Philadelphia, PA 19143",
+    "description": "Small triangle park at 50th & Baltimore. Benches, a Saturday farmers market, and an easy meeting spot near the trolley.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "farmers market",
+      "trolley"
+    ]
+  },
+  {
+    "id": "the-woodlands",
+    "name": "The Woodlands",
+    "category": "park",
+    "lat": 39.947186,
+    "lng": -75.202905,
+    "neighborhood": "University City",
+    "address": "4000 Woodland Ave, Philadelphia, PA 19104",
+    "description": "Historic cemetery and landscape that doubles as a peaceful green space: winding paths, huge old trees and quiet benches. Great for a reflective walk.",
+    "hours": {
+      "mon": "08:00-18:00",
+      "tue": "08:00-18:00",
+      "wed": "08:00-18:00",
+      "thu": "08:00-18:00",
+      "fri": "08:00-18:00",
+      "sat": "08:00-18:00",
+      "sun": "08:00-18:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "quiet",
+      "walking",
+      "history",
+      "nature"
+    ],
+    "website": "https://woodlandsphila.org"
+  },
+  {
+    "id": "bartrams-garden",
+    "name": "Bartram's Garden",
+    "category": "park",
+    "lat": 39.93195,
+    "lng": -75.211487,
+    "neighborhood": "Kingsessing",
+    "address": "5400 Lindbergh Blvd, Philadelphia, PA 19143",
+    "description": "America's oldest botanical garden on the tidal Schuylkill. Meadows, river access, free community boating in summer, and a working farm.",
+    "hours": {
+      "mon": "08:00-18:00",
+      "tue": "08:00-18:00",
+      "wed": "08:00-18:00",
+      "thu": "08:00-18:00",
+      "fri": "08:00-18:00",
+      "sat": "08:00-18:00",
+      "sun": "08:00-18:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "kids",
+      "dogs",
+      "restrooms"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "garden",
+      "river",
+      "boating",
+      "nature"
+    ],
+    "website": "https://www.bartramsgarden.org"
+  },
+  {
+    "id": "penn-park",
+    "name": "Penn Park",
+    "category": "park",
+    "lat": 39.949685,
+    "lng": -75.186484,
+    "neighborhood": "University City",
+    "address": "3000 Walnut St, Philadelphia, PA 19104",
+    "description": "Open lawns, athletic fields and skyline views between campus and the river. Open to the public; nice for a sunset sit.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "skyline",
+      "lawn"
+    ]
+  },
+  {
+    "id": "cira-green",
+    "name": "Cira Green",
+    "category": "plaza",
+    "lat": 39.952569,
+    "lng": -75.183387,
+    "neighborhood": "University City",
+    "address": "129 S 30th St, Philadelphia, PA 19104",
+    "description": "Public rooftop park on top of a parking garage, with lawn, seating and big views of the Center City skyline. Free and usually calm.",
+    "hours": {
+      "mon": "07:00-22:00",
+      "tue": "07:00-22:00",
+      "wed": "07:00-22:00",
+      "thu": "07:00-22:00",
+      "fri": "07:00-22:00",
+      "sat": "07:00-22:00",
+      "sun": "07:00-22:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "accessible"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "rooftop",
+      "skyline",
+      "sunset"
+    ]
+  },
+  {
+    "id": "drexel-park",
+    "name": "Drexel Park",
+    "category": "park",
+    "lat": 39.961004,
+    "lng": -75.187589,
+    "neighborhood": "Powelton Village",
+    "address": "32nd St & Powelton Ave, Philadelphia, PA 19104",
+    "description": "Sloped lawn with one of the best free views of the skyline. Popular with Drexel and Penn students for studying outside and sunsets.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "skyline",
+      "sunset",
+      "lawn"
+    ]
+  },
+  {
+    "id": "mill-creek-farm",
+    "name": "Mill Creek Farm",
+    "category": "community",
+    "lat": 39.966262,
+    "lng": -75.219305,
+    "neighborhood": "Mill Creek",
+    "address": "4901 Brown St, Philadelphia, PA 19139",
+    "description": "Community urban farm growing food for the neighborhood. Volunteer days and a seasonal farm stand \u2014 a welcoming place to get your hands dirty.",
+    "hours": {
+      "mon": "",
+      "tue": "",
+      "wed": "",
+      "thu": "",
+      "fri": "",
+      "sat": "10:00-14:00",
+      "sun": ""
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "kids",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "urban farm",
+      "volunteer",
+      "seasonal"
+    ]
+  },
+  {
+    "id": "belmont-plateau",
+    "name": "Belmont Plateau",
+    "category": "park",
+    "lat": 39.990368,
+    "lng": -75.212626,
+    "neighborhood": "Fairmount Park West",
+    "address": "1800 Belmont Mansion Dr, Philadelphia, PA 19131",
+    "description": "Hilltop meadow in West Fairmount Park with a sweeping view of the whole city. Wide open space for picnics, kites and stargazing.",
+    "hours": {
+      "mon": "06:00-01:00",
+      "tue": "06:00-01:00",
+      "wed": "06:00-01:00",
+      "thu": "06:00-01:00",
+      "fri": "06:00-01:00",
+      "sat": "06:00-01:00",
+      "sun": "06:00-01:00"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "dogs",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "views",
+      "picnic",
+      "nature"
+    ]
+  },
+  {
+    "id": "cobbs-creek-eec",
+    "name": "Cobbs Creek Community Environmental Center",
+    "category": "community",
+    "lat": 39.952011,
+    "lng": -75.250612,
+    "neighborhood": "Cobbs Creek",
+    "address": "Cobbs Creek Nature Center Dr, Philadelphia, PA 19143",
+    "description": "Nature center on the edge of Cobbs Creek Park with trails along the creek and free nature programs for all ages.",
+    "hours": {
+      "mon": "closed",
+      "tue": "10:00-16:00",
+      "wed": "10:00-16:00",
+      "thu": "10:00-16:00",
+      "fri": "10:00-16:00",
+      "sat": "10:00-14:00",
+      "sun": "closed"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "kids",
+      "restrooms"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "nature",
+      "trails",
+      "creek"
+    ]
+  },
+  {
+    "id": "walnut-west-library",
+    "name": "Walnut Street West Library",
+    "category": "library",
+    "lat": 39.95379,
+    "lng": -75.202468,
+    "neighborhood": "University City",
+    "address": "201 S 40th St, Philadelphia, PA 19104",
+    "description": "Free Library branch just off campus in a light-filled building. Tables, computers and a calm place to read or study.",
+    "hours": {
+      "mon": "10:00-17:00",
+      "tue": "12:00-20:00",
+      "wed": "12:00-20:00",
+      "thu": "10:00-17:00",
+      "fri": "10:00-17:00",
+      "sat": "10:00-17:00",
+      "sun": "closed"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "study",
+      "free library"
+    ],
+    "website": "https://www.freelibrary.org"
+  },
+  {
+    "id": "west-philadelphia-regional-library",
+    "name": "Lucien E. Blackwell West Philadelphia Regional Library",
+    "category": "library",
+    "lat": 39.957405,
+    "lng": -75.225067,
+    "neighborhood": "Walnut Hill",
+    "address": "125 S 52nd St, Philadelphia, PA 19139",
+    "description": "Large regional branch of the Free Library near the 52nd St El stop, with plenty of seating, computers and community programs.",
+    "hours": {
+      "mon": "10:00-17:00",
+      "tue": "12:00-20:00",
+      "wed": "12:00-20:00",
+      "thu": "10:00-17:00",
+      "fri": "10:00-17:00",
+      "sat": "10:00-17:00",
+      "sun": "closed"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "study",
+      "free library",
+      "programs"
+    ],
+    "website": "https://www.freelibrary.org"
+  },
+  {
+    "id": "kingsessing-library",
+    "name": "Kingsessing Library",
+    "category": "library",
+    "lat": 39.942046,
+    "lng": -75.218205,
+    "neighborhood": "Kingsessing",
+    "address": "1201 S 51st St, Philadelphia, PA 19143",
+    "description": "Neighborhood Free Library branch next to Kingsessing Rec Center. Friendly staff, kids' programs and quiet reading space.",
+    "hours": {
+      "mon": "10:00-17:00",
+      "tue": "12:00-20:00",
+      "wed": "12:00-20:00",
+      "thu": "10:00-17:00",
+      "fri": "10:00-17:00",
+      "sat": "10:00-17:00",
+      "sun": "closed"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "free library"
+    ],
+    "website": "https://www.freelibrary.org"
+  },
+  {
+    "id": "haddington-library",
+    "name": "Haddington Library",
+    "category": "library",
+    "lat": 39.970637,
+    "lng": -75.249669,
+    "neighborhood": "Haddington",
+    "address": "446 N 65th St, Philadelphia, PA 19151",
+    "description": "Free Library branch serving Haddington and Overbrook, with computers, study tables and community programs.",
+    "hours": {
+      "mon": "10:00-17:00",
+      "tue": "12:00-20:00",
+      "wed": "12:00-20:00",
+      "thu": "10:00-17:00",
+      "fri": "10:00-17:00",
+      "sat": "10:00-17:00",
+      "sun": "closed"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "free library"
+    ],
+    "website": "https://www.freelibrary.org"
+  },
+  {
+    "id": "van-pelt-library",
+    "name": "Van Pelt Library",
+    "category": "library",
+    "lat": 39.952714,
+    "lng": -75.193933,
+    "neighborhood": "University City",
+    "address": "3420 Walnut St, Philadelphia, PA 19104",
+    "description": "Penn's main library on Locust Walk. Lots of study space across many floors, from silent rooms to group tables. Visitors may need to sign in or show ID \u2014 check access rules.",
+    "hours": {
+      "mon": "08:00-00:00",
+      "tue": "08:00-00:00",
+      "wed": "08:00-00:00",
+      "thu": "08:00-00:00",
+      "fri": "08:00-00:00",
+      "sat": "10:00-20:00",
+      "sun": "10:00-00:00"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "study",
+      "penn",
+      "open late"
+    ],
+    "website": "https://www.library.upenn.edu"
+  },
+  {
+    "id": "houston-hall",
+    "name": "Houston Hall",
+    "category": "community",
+    "lat": 39.950938,
+    "lng": -75.19388,
+    "neighborhood": "University City",
+    "address": "3417 Spruce St, Philadelphia, PA 19104",
+    "description": "Penn's student union. Lounges, the Hall of Flags, food options and lots of seating \u2014 a classic between-classes hangout.",
+    "hours": {
+      "mon": "07:00-23:00",
+      "tue": "07:00-23:00",
+      "wed": "07:00-23:00",
+      "thu": "07:00-23:00",
+      "fri": "07:00-23:00",
+      "sat": "09:00-23:00",
+      "sun": "09:00-23:00"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "restrooms",
+      "accessible",
+      "free",
+      "food",
+      "groups"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "penn",
+      "student union"
+    ]
+  },
+  {
+    "id": "kelly-writers-house",
+    "name": "Kelly Writers House",
+    "category": "community",
+    "lat": 39.952939,
+    "lng": -75.199532,
+    "neighborhood": "University City",
+    "address": "3805 Locust Walk, Philadelphia, PA 19104",
+    "description": "A house on Locust Walk devoted to writing and conversation. Free readings and events open to the public, and a homey place to sit.",
+    "hours": {
+      "mon": "09:00-21:00",
+      "tue": "09:00-21:00",
+      "wed": "09:00-21:00",
+      "thu": "09:00-21:00",
+      "fri": "09:00-21:00",
+      "sat": "",
+      "sun": ""
+    },
+    "amenities": [
+      "free",
+      "wifi",
+      "groups",
+      "restrooms"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "writing",
+      "readings",
+      "penn",
+      "events"
+    ],
+    "website": "https://writing.upenn.edu/wh"
+  },
+  {
+    "id": "college-green",
+    "name": "College Green & Locust Walk",
+    "category": "plaza",
+    "lat": 39.9521,
+    "lng": -75.19325,
+    "neighborhood": "University City",
+    "address": "Locust Walk at 34th St, Philadelphia, PA 19104",
+    "description": "The heart of Penn's campus. Benches, steps and lawn for people-watching, meeting friends or eating lunch outside.",
+    "hours": {
+      "mon": "24h",
+      "tue": "24h",
+      "wed": "24h",
+      "thu": "24h",
+      "fri": "24h",
+      "sat": "24h",
+      "sun": "24h"
+    },
+    "amenities": [
+      "free",
+      "outdoor",
+      "groups",
+      "accessible"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "penn",
+      "people watching",
+      "open late"
+    ]
+  },
+  {
+    "id": "penn-museum",
+    "name": "Penn Museum",
+    "category": "museum",
+    "lat": 39.949286,
+    "lng": -75.19203,
+    "neighborhood": "University City",
+    "address": "3260 South St, Philadelphia, PA 19104",
+    "description": "World-class archaeology and anthropology museum with a calm courtyard garden and caf\u00e9. Free for Penn students; ticketed for others.",
+    "hours": {
+      "mon": "closed",
+      "tue": "10:00-17:00",
+      "wed": "10:00-17:00",
+      "thu": "10:00-17:00",
+      "fri": "10:00-17:00",
+      "sat": "10:00-17:00",
+      "sun": "10:00-17:00"
+    },
+    "amenities": [
+      "restrooms",
+      "accessible",
+      "food",
+      "outdoor",
+      "kids"
+    ],
+    "cost": 1,
+    "noise": "quiet",
+    "tags": [
+      "museum",
+      "garden",
+      "penn"
+    ],
+    "website": "https://www.penn.museum"
+  },
+  {
+    "id": "ica-philadelphia",
+    "name": "Institute of Contemporary Art",
+    "category": "museum",
+    "lat": 39.954065,
+    "lng": -75.194773,
+    "neighborhood": "University City",
+    "address": "118 S 36th St, Philadelphia, PA 19104",
+    "description": "Contemporary art museum with always-free admission. Small, thoughtful exhibitions and a quiet place to wander.",
+    "hours": {
+      "mon": "closed",
+      "tue": "closed",
+      "wed": "11:00-18:00",
+      "thu": "11:00-18:00",
+      "fri": "11:00-18:00",
+      "sat": "11:00-17:00",
+      "sun": "11:00-17:00"
+    },
+    "amenities": [
+      "free",
+      "accessible",
+      "restrooms"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "art",
+      "free museum"
+    ],
+    "website": "https://icaphila.org"
+  },
+  {
+    "id": "saxbys-40th-locust",
+    "name": "Saxbys 40th & Locust",
+    "category": "cafe",
+    "lat": 39.952879,
+    "lng": -75.203052,
+    "neighborhood": "University City",
+    "address": "4000 Locust St, Philadelphia, PA 19104",
+    "description": "Student-run caf\u00e9 on the edge of campus. Busy, friendly and full of people working on laptops.",
+    "hours": {
+      "mon": "07:00-19:00",
+      "tue": "07:00-19:00",
+      "wed": "07:00-19:00",
+      "thu": "07:00-19:00",
+      "fri": "07:00-19:00",
+      "sat": "08:00-17:00",
+      "sun": "08:00-17:00"
+    },
+    "amenities": [
+      "wifi",
+      "outlets",
+      "laptops",
+      "food"
+    ],
+    "cost": 1,
+    "noise": "lively",
+    "tags": [
+      "coffee",
+      "student run",
+      "penn"
+    ]
+  },
+  {
+    "id": "penn-bookstore",
+    "name": "Penn Bookstore",
+    "category": "bookstore",
+    "lat": 39.953382,
+    "lng": -75.195067,
+    "neighborhood": "University City",
+    "address": "3601 Walnut St, Philadelphia, PA 19104",
+    "description": "Big campus bookstore with a caf\u00e9 and comfy seating upstairs. Easy place to browse, read or wait for a friend.",
+    "hours": {
+      "mon": "09:00-21:00",
+      "tue": "09:00-21:00",
+      "wed": "09:00-21:00",
+      "thu": "09:00-21:00",
+      "fri": "09:00-21:00",
+      "sat": "10:00-20:00",
+      "sun": "11:00-18:00"
+    },
+    "amenities": [
+      "wifi",
+      "restrooms",
+      "accessible",
+      "food",
+      "free"
+    ],
+    "cost": 1,
+    "noise": "moderate",
+    "tags": [
+      "books",
+      "coffee",
+      "penn"
+    ]
+  },
+  {
+    "id": "last-word-bookshop",
+    "name": "The Last Word Bookshop",
+    "category": "bookstore",
+    "lat": 39.953429,
+    "lng": -75.202893,
+    "neighborhood": "University City",
+    "address": "220 S 40th St, Philadelphia, PA 19104",
+    "description": "Cozy used bookstore packed floor to ceiling. Lose an hour browsing; occasional readings and events.",
+    "hours": {
+      "mon": "10:00-22:00",
+      "tue": "10:00-22:00",
+      "wed": "10:00-22:00",
+      "thu": "10:00-22:00",
+      "fri": "10:00-22:00",
+      "sat": "10:00-22:00",
+      "sun": "11:00-20:00"
+    },
+    "amenities": [
+      "free"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "used books",
+      "browsing",
+      "open late"
+    ]
+  },
+  {
+    "id": "bindlestiff-books",
+    "name": "Bindlestiff Books",
+    "category": "bookstore",
+    "lat": 39.948841,
+    "lng": -75.213866,
+    "neighborhood": "Spruce Hill",
+    "address": "4530 Baltimore Ave, Philadelphia, PA 19143",
+    "description": "Small independent bookstore on Baltimore Ave with a thoughtful selection and a friendly neighborhood feel.",
+    "hours": {
+      "mon": "closed",
+      "tue": "11:00-19:00",
+      "wed": "11:00-19:00",
+      "thu": "11:00-19:00",
+      "fri": "11:00-19:00",
+      "sat": "11:00-19:00",
+      "sun": "12:00-17:00"
+    },
+    "amenities": [
+      "free",
+      "kids"
+    ],
+    "cost": 0,
+    "noise": "quiet",
+    "tags": [
+      "books",
+      "independent"
+    ]
+  },
+  {
+    "id": "satellite-cafe",
+    "name": "The Satellite Cafe",
+    "category": "cafe",
+    "lat": 39.947852,
+    "lng": -75.222615,
+    "neighborhood": "Cedar Park",
+    "address": "701 S 50th St, Philadelphia, PA 19143",
+    "description": "Long-running neighborhood coffee shop at 50th & Baltimore. A relaxed spot to read, work or catch up with a friend.",
+    "hours": {
+      "mon": "07:00-18:00",
+      "tue": "07:00-18:00",
+      "wed": "07:00-18:00",
+      "thu": "07:00-18:00",
+      "fri": "07:00-18:00",
+      "sat": "07:00-18:00",
+      "sun": "07:00-18:00"
+    },
+    "amenities": [
+      "wifi",
+      "laptops",
+      "food",
+      "outdoor"
+    ],
+    "cost": 1,
+    "noise": "moderate",
+    "tags": [
+      "coffee",
+      "neighborhood"
+    ]
+  },
+  {
+    "id": "clarkville",
+    "name": "Clarkville",
+    "category": "bar",
+    "lat": 39.949768,
+    "lng": -75.209411,
+    "neighborhood": "Spruce Hill",
+    "address": "4301 Baltimore Ave, Philadelphia, PA 19104",
+    "description": "Neighborhood pizza and beer spot facing Clark Park, with outdoor tables. Easy to drop in after the farmers market.",
+    "hours": {
+      "mon": "11:30-23:00",
+      "tue": "11:30-23:00",
+      "wed": "11:30-23:00",
+      "thu": "11:30-23:00",
+      "fri": "11:30-23:00",
+      "sat": "11:00-00:00",
+      "sun": "11:00-22:00"
+    },
+    "amenities": [
+      "food",
+      "groups",
+      "outdoor",
+      "kids"
+    ],
+    "cost": 2,
+    "noise": "lively",
+    "tags": [
+      "pizza",
+      "clark park"
+    ]
+  },
+  {
+    "id": "the-rotunda",
+    "name": "The Rotunda",
+    "category": "community",
+    "lat": 39.953833,
+    "lng": -75.203723,
+    "neighborhood": "University City",
+    "address": "4014 Walnut St, Philadelphia, PA 19104",
+    "description": "Domed former church run as a free community arts space \u2014 concerts, film screenings, dance parties and talks. Check the calendar.",
+    "hours": {
+      "mon": "",
+      "tue": "",
+      "wed": "",
+      "thu": "",
+      "fri": "",
+      "sat": "",
+      "sun": ""
+    },
+    "amenities": [
+      "free",
+      "groups",
+      "accessible"
+    ],
+    "cost": 0,
+    "noise": "lively",
+    "tags": [
+      "events",
+      "music",
+      "arts"
+    ]
+  },
+  {
+    "id": "calvary-center",
+    "name": "Calvary Center for Culture & Community",
+    "category": "community",
+    "lat": 39.94819,
+    "lng": -75.218525,
+    "neighborhood": "Cedar Park",
+    "address": "801 S 48th St, Philadelphia, PA 19143",
+    "description": "Historic church building that hosts community groups, performances, recovery meetings and neighborhood events.",
+    "hours": {
+      "mon": "",
+      "tue": "",
+      "wed": "",
+      "thu": "",
+      "fri": "",
+      "sat": "",
+      "sun": ""
+    },
+    "amenities": [
+      "free",
+      "groups",
+      "restrooms"
+    ],
+    "cost": 0,
+    "noise": "moderate",
+    "tags": [
+      "events",
+      "community groups"
+    ]
+  },
+  {
+    "id": "paul-robeson-house",
+    "name": "Paul Robeson House & Museum",
+    "category": "museum",
+    "lat": 39.956607,
+    "lng": -75.221406,
+    "neighborhood": "Walnut Hill",
+    "address": "4951 Walnut St, Philadelphia, PA 19139",
+    "description": "The last home of singer, actor and activist Paul Robeson, now a small museum and community gathering place. Tours by appointment.",
+    "hours": {
+      "mon": "",
+      "tue": "",
+      "wed": "",
+      "thu": "",
+      "fri": "",
+      "sat": "",
+      "sun": ""
+    },
+    "amenities": [
+      "groups"
+    ],
+    "cost": 1,
+    "noise": "quiet",
+    "tags": [
+      "history",
+      "black history",
+      "museum"
+    ]
+  }
+]
